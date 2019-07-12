@@ -13,6 +13,9 @@ Input: heights of trees below:
 Output:
 `169.375`
 
+// first thing that I want to do is create a variable to hold evertything in. 
+
+var heights : Set<string> = [161, 182, 161, 154, 176, 170, 167, 171, 170, 174]
 
 ## Question 2
 
@@ -51,7 +54,20 @@ let arr2 = [1, 2, 3, 4, 5, 6]
 let arr3 = [5, 6, 7, 8, 9, 10, 11, 12]
 let arr4 = [1, 3, 4, 5, 6, 7, 9]
 ```
+var set1 = Set(arr1)
+var set2 = Set(arr2)
+var set3 = Set(arr3)
+var set4 = Set(arr4)
 
+let setUnion = set1.union(set2)
+let secondUnion = setUnion.union(set3)
+let thirdUnion = secondUnion.union(set4)
+
+var finalArray = Array(thirdUnion)
+
+finalArray = finalArray.sorted()
+
+print(finalArray)
 
 ## Question 5
 
@@ -66,6 +82,19 @@ Perform the following set operations on the lists below:
 let list1: Set = [1, 3, 4, 6, 2, 7, 9]
 let list2: Set = [3, 7, 13, 10, 4]
 ```
+
+let combinedList = list1.intersection(list2)
+print(combinedList)
+// this is for the intersection part of the question
+let differentList = list1.symmetricDifference(list2)
+print(differentList)
+// this is for finding the symmetrical difference for both of the lists.
+let setUnion = list1.union(list2)
+print(setUnion)
+// this is for combining the lists together & removing the duplicates.
+let setDifference = list1.symmetricDifference(list2)
+print(setDifference)
+// this is to find the numbers that are not in each list and it doesnt include the duplicates as well. 
 
 
 ## Question 6
@@ -91,6 +120,7 @@ print(spaceships.count)
 - 1
 - This code will compile but crash
 
+// The answer is that nothing would be the output because there will be a error that states that the generic parameter 'Element' could not be inferred. So with that being said, it will also not be able to compile since it will not print anything. 
 
 ## Question 7
 
@@ -117,3 +147,5 @@ if spaceships1.isSubset(of: spaceships2) {
 - This code will not compile
 - "This is a subset"
 - Nothing will be output
+
+// The answer is that nothing would be the output because there will be a error that states that the generic parameter 'Element' could not be inferred. So with that being said, it will also not be able to compile since it will not print anything. 
